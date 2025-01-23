@@ -2,7 +2,7 @@
 
 The purpose of this repository is to aggregate all the google advanced query search operators for conducting OSINT via google hacking. I was unable to locate complete, exhaustive, official documentation. Rather, I had to peruse multiple, unofficial sources. I have tried to combine these sources into a single table. The original sources are located at the bottom under the "Google Hacking Sources" heading.
 
-If you have questions, comments, concerns or corrections, reach out to me [here](me@andrefristo.com).
+If you have questions, comments, concerns or corrections, reach out to me via email: [me@andrefristo.com](mailto:me@andrefristo.com)
 
 This repository is licensed under the [Creative Commons Zero v1.0 Universal License](https://choosealicense.com/licenses/cc0-1.0/) to allow the broadest use of the information. It is intended purely for the public domain.
 
