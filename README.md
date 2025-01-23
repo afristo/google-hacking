@@ -16,30 +16,41 @@ These search operators allow you to construct searches via basic logic. Includin
 | "" | The string must match exactly (case-insensitive). | "{string}" | "American Heart Association" |
 | AND | Match this term as well. This is technically implicit in any search with a space and is usually redundant. | {string} + {string} | American + Heart + Association (equivalent to searching: American Heart Association) |
 | OR | Match the first term or the second term. | {string} OR {string} | American Heart Association OR AHA |
-| \| | See "OR Operator" above. | {string} OR {string} | American Heart Association \| AHA |
-| - | Exclude the term that follows the operator. | -{string} | AHA -donation |
+| \| | Match the first term or the second term. | {string} OR {string} | American Heart Association \| AHA |
+| - | Exclude the term that follows the operator. | -{string} | AHA -historical |
 | #..# | Search a range of numbers, including the ends. | {number}..{number} | AHA donations for 2000..2010 |
 | AROUND(n) | Match pages containing the search terms separated by at most n words. | {string} AROUND(5) {string} | American Heart Association AROUND(5) funding |
 | () | Group many terms and operators, allows construction of more advanced searches. | ({terms and operators}) | American Heart Association AND (funding OR donors OR fundraising) |
 
 ### Scope Restricting Search Operators
-These operators narrow the broad scope of a search through different methods such as time, specific websites, url contents, etc.
+These operators narrow the broad scope of a search through different methods such as time, specific websites, url contents, etc. The following operators are demonstrated in the context of conducting an OSINT investigation to understand funding for the American Heart Association.
+
 | Operator | Description | Syntax | Example |
 | :------: | :---------- | :----: | :-----: |
-| site | Search only on a given site. The argument may also be a TLD such as com, net, etc. | site:{domain} | site:google.com |
-| after | Search for results after a given date | {string} after:{yyyy-mm-dd} | covid after:2024-01-01 |
-| before | Search for results before a given date | {string} before:{yyyy-mm-dd} | drop-shipping before:2015-06-03 |
+| @ | Restrict search to popular social media sites. Not as precise as the site: operator. | @{platform} {search string} | @youtube american heart association |
+| after: | Search for results after a given date. | {string} after:{yyyy-mm-dd} | AHA donations after:2024-01-01 |
+| allintitle: | Find results with multiple words in the title tag. | {search string} allintitle:{string} {string} | AHA allintitle:FY financial |
+| allinurl: | Find results with multiple words in the url. | {search string} allinurl:{string} | AHA allinurl:files finance |
+| allintext: | Find results with a multiple words in the text of the document. | {search string} allintext:{string} {string} | AHA allintext:donor contributions |
+| before: | Search for results before a given date. | {string} before:{yyyy-mm-dd} | AHA biggest donors before:2015-06-03 |
+| ext: | Search for results containing a [specific file extension](https://developers.google.com/search/docs/crawling-indexing/indexable-file-types) (identical to filetype: operator) (e.g. PDF, XLSX, etc.). | {search string} ext:{string} | AHA ext:pdf |
+| filetype: | Search for results containing a [specific filetype](https://developers.google.com/search/docs/crawling-indexing/indexable-file-types) (identical to ext: operator) (e.g. PDF, XLSX, etc.). | {search string} filetype:{string} | AHA filetype:pdf |
+| intext: | Find results with a specific word in the text of the document. | {search string} intext:{string} | AHA intext:donors |
+| intitle: | Find results with a specific word in the title tag. | {search string} intitle:{string} | american heart association intitile:disclosure |
+| inurl: | Find results with a specific word in the URL of the document. | {search string} inurl:{string} | american heart association inurl:finance |
+| related: | Search for documents that are related to the given website. | {search string} related:{string} | donations related:heart.org |
+| site: | Search only on a given site. The argument may also be a TLD such as com, net, etc. | {search string} site:{string} | donation site:heart.org |
 
 ### Topic-Specific Search Operators
 These operators allow you to search for a specific type of information about something, like the weather, stock price information, information about movies, etc.
 | Operator | Description | Syntax | Example |
 | :------: | :---------- | :----: | :-----: |
 | define: | Search for the definition of a word. | define:{string} | define:system |
-
+| location: | Search for location specific information about a given topic. | location:{string} | location:dallas |
 | map: | Return only map results of a given topic. | map:{string} | map:Dallas |
 | movie: | Search for information about a specific move. | movie:{string} | movie:Interstellar |
 | source: | Search for results from a specific news source. | {search string} source:{source string} | election source:CBS |
-| stocks: | Search for information about a specific stock. | stock:{string} | stocks:META |
+| stocks: | Search for information about a specific stock. | stocks:{string} | stocks:META |
 | weather: | Search for information about the weather of the given location. | weather:{string} | weather:Dallas |
 
 ### Deprecated Search Operators
@@ -49,11 +60,13 @@ These search operators used to work but are now deprecated. Knowing what you can
 | + | Functioned the same as the AND operator. | 2011 |
 | # | Search for hashtags in google+. | 2019 |
 | ~ | Search for synonyms. | 2013 |
-| allinpostauthor: | Search for posts by a specific author in the discontinued Google Blog Search, but without quotes. | N/A |
+| allinpostauthor: | Search for posts by a specific author in the discontinued Google Blog Search, but without quotes. | Unknown |
+| cache: | Search for the cached version of a website. Uses Google's cache. URL must be *exact*. | 2024 |
+| inanchor: | Find results using a specific anchor text. | Unknown |
 | info:, id: | Search for information about a specific page or website. | 2017 |
-| inpostauthor: | Search for posts by a specific author in the discontinued Google Blog Search. | N/A |
-| inposttitle: | Search for posts with certain words in the title in Google’s discontinued Blog Search. | N/A |
-| link: | Search for pages linking to a particular domain or URL. | 2017 |
+| inpostauthor: | Search for posts by a specific author in the discontinued Google Blog Search. | Unknown |
+| inposttitle: | Search for posts with certain words in the title in Google’s discontinued Blog Search. | Unknown |
+| link:, links: | Search for pages linking to a particular domain or URL. | 2017 |
 | phonebook: | Search for someone's phone number. | 2010 |
 
 ## Google Hacking Sources
