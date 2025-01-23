@@ -43,6 +43,7 @@ These operators narrow the broad scope of a search through different methods suc
 
 ### Topic-Specific Search Operators
 These operators allow you to search for a specific type of information about something, like the weather, stock price information, information about movies, etc.
+
 | Operator | Description | Syntax | Example |
 | :------: | :---------- | :----: | :-----: |
 | define: | Search for the definition of a word. | define:{string} | define:system |
@@ -52,6 +53,26 @@ These operators allow you to search for a specific type of information about som
 | source: | Search for results from a specific news source. | {search string} source:{source string} | election source:CBS |
 | stocks: | Search for information about a specific stock. | stocks:{string} | stocks:META |
 | weather: | Search for information about the weather of the given location. | weather:{string} | weather:Dallas |
+
+### Mathematical Search Operators
+These operators allow you to use google like a calculator and other similar functions.
+
+| Operator | Description | Example | Result |
+| :------: | :---------- | :----: | :-----: |
+| + | Addition | 2+2 | 4 |
+| - | Subtraction | 1-3 | -2 |
+| * | Multiplication | 2*3 | 6 |
+| / | Division | 4/2 | 2 |
+| % of | Percentage | 33% of 9 | 2.97 |
+| X^Y, X**Y | Raise X to the power of Y.Both operators ^ and ** perform the same operation. | 3^2, 3**2 | 9 |
+| in, to | Convert a quantity from a given unit to another. Translate words into another language. | 6 ft 2 inches in cm, 140 lbs in kg, 100 USD to bitcoin, 8 am London time to California time, thank you in spanish. | 6 ft 2 inches in cm = 187.96 |
+| sqrt | Square root function. | sqrt(4) | 2 |
+| i | Imaginary number. | i^2 | -1 |
+| N choose R | Find how many combinations are possible from N items taken R at a time, where N and R are integers (combinatorics). | 6 choose 4 | 15 |
+| sin, cos, tan | Trigonometric functions. You may specify the formula using symbols and natural language. | sin(pi/6), sin 30 degrees | sin(pi/6) = 0.5 |
+| timer | A basic timer. | timer for 20 minutes | A visible, working timer. |
+| N/A| Generate a random number. | flip a coin, roll a dice, show random number from 10 to 40 | tails |
+| [graph] EXPRESSION [from A to B] | Graph a mathematical EXPRESSION with variables x and y on an (optional) numerical range from A to B. The “graph” keyword is only necessary if Google doesn’t understand your query. | sin(x)/x, graph log(x), sqrt(x^2+y^2) from -20 to 20 | A visibile, mathematical, plot. |
 
 ### Deprecated Search Operators
 These search operators used to work but are now deprecated. Knowing what you can't do is as important as knowing what you cannot do.
