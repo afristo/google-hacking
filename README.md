@@ -20,15 +20,15 @@ These search operators allow you to construct searches via basic logic. Includin
 | - | Exclude the term that follows the operator. | -{string} | AHA -donation |
 | #..# | Search a range of numbers, including the ends. | {number}..{number} | AHA donations for 2000..2010 |
 | AROUND(n) | Match pages containing the search terms separated by at most n words. | {string} AROUND(5) {string} | American Heart Association AROUND(5) funding |
-| () | Group many terms and operators, allows construction of more advanced searches. | ({terms and operators}}) | American Heart Association AND (funding OR donors OR fundraising) |
+| () | Group many terms and operators, allows construction of more advanced searches. | ({terms and operators}) | American Heart Association AND (funding OR donors OR fundraising) |
 
 ### Scope Restricting Search Operators
 These operators narrow the broad scope of a search through different methods such as time, specific websites, url contents, etc.
 | Operator | Description | Syntax | Example |
 | :------: | :---------- | :----: | :-----: |
 | site | Search only on a given site. The argument may also be a TLD such as com, net, etc. | site:{domain} | site:google.com |
-| after | Search for results after a given date | {string} after:{yyyy-mm-dd}} | covid after:2024-01-01 |
-| before | Search for results before a given date | {string} before:{yyyy-mm-dd}} | drop-shipping before:2015-06-03 |
+| after | Search for results after a given date | {string} after:{yyyy-mm-dd} | covid after:2024-01-01 |
+| before | Search for results before a given date | {string} before:{yyyy-mm-dd} | drop-shipping before:2015-06-03 |
 
 ### Topic-Specific Search Operators
 These operators allow you to search for a specific type of information about something, like the weather, stock price information, information about movies, etc.
