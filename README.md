@@ -1,6 +1,6 @@
 # google-hacking
 
-The purpose of this repository is to aggregate all the google advanced query search operators that I could find. I was unable to locate complete, exhaustive, official documentation. Rather, I had to peruse multiple, unofficial sources. I have tried to combine these sources into a single table. The sources are located at the bottom under the "Google Hacking Sources" heading.
+The purpose of this repository is to aggregate all the google advanced query search operators that I could find. I was unable to locate complete, exhaustive, official documentation. Rather, I had to peruse multiple, unofficial sources. I have tried to combine these sources into a single table. The original sources are located at the bottom under the "Google Hacking Sources" heading.
 
 This repository is licensed under the [Creative Commons Zero v1.0 Universal License](https://choosealicense.com/licenses/cc0-1.0/) to allow the broadest use of the information. It is intended purely for the public domain.
 
@@ -98,3 +98,5 @@ These search operators used to work but are now deprecated. Knowing what you can
 - [NordVPN: What are Google dorks?](https://nordvpn.com/blog/google-hacks/)
 - [ExploitDB: Google Hacking Database](https://www.exploit-db.com/google-hacking-database)
 - [Splunk: Google Dorking](https://www.splunk.com/en_us/blog/learn/google-dorking.html)
+
+Note - All queries were last tested in January, 2025.
