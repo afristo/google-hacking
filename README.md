@@ -1,6 +1,8 @@
 # google-hacking
 
-The purpose of this repository is to aggregate all the google advanced query search operators that I could find. I was unable to locate complete, exhaustive, official documentation. Rather, I had to peruse multiple, unofficial sources. I have tried to combine these sources into a single table. The original sources are located at the bottom under the "Google Hacking Sources" heading.
+The purpose of this repository is to aggregate all the google advanced query search operators for conducting OSINT via google hacking. I was unable to locate complete, exhaustive, official documentation. Rather, I had to peruse multiple, unofficial sources. I have tried to combine these sources into a single table. The original sources are located at the bottom under the "Google Hacking Sources" heading.
+
+If you have questions, comments, concerns or corrections, reach out to me [here](me@andrefristo.com).
 
 This repository is licensed under the [Creative Commons Zero v1.0 Universal License](https://choosealicense.com/licenses/cc0-1.0/) to allow the broadest use of the information. It is intended purely for the public domain.
 
@@ -8,7 +10,7 @@ This repository is licensed under the [Creative Commons Zero v1.0 Universal Lice
 All google hacking operators are contained below and logically grouped by their function.
 
 ### Logical Search Operators
-These search operators allow you to construct searches via basic logic. Including whole strings, partial strings, setting and/or/not logic of strings, setting string proximity, etc. The following operators are demonstrated in the context of conducting an OSINT investigation to understand funding for the American Heart Association.
+These search operators allow you to construct searches via basic logic. Including whole strings, partial strings, setting and/or/not logic, setting string proximity, etc. The following operators are demonstrated in the context of conducting an OSINT investigation into funding for the American Heart Association.
 
 | Operator | Description | Syntax | Example |
 | :------: | :---------- | :----: | :-----: |
@@ -23,7 +25,7 @@ These search operators allow you to construct searches via basic logic. Includin
 | () | Group many terms and operators, allows construction of more advanced searches. | ({terms and operators}) | American Heart Association AND (funding OR donors OR fundraising) |
 
 ### Scope Restricting Search Operators
-These operators narrow the broad scope of a search through different methods such as time, specific websites, url contents, etc. The following operators are demonstrated in the context of conducting an OSINT investigation to understand funding for the American Heart Association.
+These operators narrow the broad scope of a search through different methods such as time, specific websites, url contents, etc. The following operators are demonstrated in the context of conducting an OSINT investigation into funding for the American Heart Association.
 
 | Operator | Description | Syntax | Example |
 | :------: | :---------- | :----: | :-----: |
@@ -55,7 +57,7 @@ These operators allow you to search for a specific type of information about som
 | weather: | Search for information about the weather of the given location. | weather:{string} | weather:Dallas |
 
 ### Mathematical Search Operators
-These operators allow you to use google like a calculator and other similar functions.
+These operators allow you to use google as a calculator and other similar functions.
 
 | Operator | Description | Example | Result |
 | :------: | :---------- | :----: | :-----: |
@@ -75,7 +77,7 @@ These operators allow you to use google like a calculator and other similar func
 | [graph] EXPRESSION [from A to B] | Graph a mathematical EXPRESSION with variables x and y on an (optional) numerical range from A to B. The “graph” keyword is only necessary if Google doesn’t understand your query. | sin(x)/x, graph log(x), sqrt(x^2+y^2) from -20 to 20 | A visibile, mathematical, plot. |
 
 ### Deprecated Search Operators
-These search operators used to work but are now deprecated. Knowing what you can't do is as important as knowing what you cannot do.
+These search operators used to work but are now deprecated.
 | Operator | Description | Deprecated |
 | :------: | :---------- | :--------: |
 | + | Functioned the same as the AND operator. | 2011 |
